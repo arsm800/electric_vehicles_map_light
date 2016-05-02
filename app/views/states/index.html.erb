@@ -1,0 +1,39 @@
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.js"></script>
+</head>
+
+<div class="dropdown">
+  <button class="dropbtn">Year</button>
+  <div class="dropdown-content">
+    <button class="dropbtn-year" id="map2013">2013</button>
+    <button class="dropbtn-year" id="map2012">2012</button>
+    <button class="dropbtn-year" id="map2011">2011</button>
+    <button class="dropbtn-year" id="map2010">2010</button>
+    <button class="dropbtn-year" id="map2009">2009</button>
+  </div>
+</div>
+
+<div id="usmap"></div>
+
+<div class="dropdown">
+  <button class="dropbtn">Year</button>
+  <div class="dropdown-content">
+    <button class="dropbtn-year" id="bar2013">2013</button>
+    <button class="dropbtn-year" id="bar2012">2012</button>
+    <button class="dropbtn-year" id="bar2011">2011</button>
+    <button class="dropbtn-year" id="bar2010">2010</button>
+    <button class="dropbtn-year" id="bar2009">2009</button>
+  </div>
+</div>
+
+<div id="bars"></div>
+
+<div id="buttons">
+  <% @states.each do |state| %>
+    <%= button_to state.state, state_path(state), :method => "get", :class => "state-button" %>
+  <% end %>
+</div>
+
+<script src="us_map.js"></script>
+<script src="graphs-index.js"></script>
