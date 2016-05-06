@@ -10,8 +10,8 @@
 
 require "csv"
 
-State.destroy_all
 Station.destroy_all
+State.destroy_all
 
 csv_text = File.read(Rails.root.join("public", "electric_vehicles.csv"))
 csv = CSV.parse(csv_text, :headers => true)
