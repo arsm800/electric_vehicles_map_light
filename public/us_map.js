@@ -20,10 +20,11 @@ var color = d3.scale.quantize()   //A linear scale with discrete output values (
                     .range(["rgb(186, 228, 179)", "rgb(116,196,118)", "rgb(49, 163, 84)", "rgb(0, 109, 44)", "rgb(17, 60, 2)"]);
 
 //Create function to route to state view.//
-var stateView = function() {
-                  console.log("State clicked.");
-                  location.href="/states/9";  //Still working on how to get this link to go to the specific state clicked on.//
-                  };
+// var stateView = function() {
+//                   console.log("State clicked.");
+//                   var =
+//                   location.href="/states/"+;  //Still working on how to get this link to go to the specific state clicked on.//
+//                   };
 
 var drawMap = function(year) {
 
@@ -98,14 +99,12 @@ d3.csv("electric_vehicles.csv", function(data) {  //Load csv file data and set i
         .style("fill-opacity", 1);
       })
       .on("click", function() {
-        stateView();
+        location.href = "/states/10";  //I tried this.state_id, but no console.logs appear and thid.state_id does not work.//
+        console.log("hello");
       });
 
-      console.log(paths);
       paths.style("fill", function(d) {
-        console.log(d);
         var value = d.properties.value;
-        console.log(value);             //Does not show up when I click on year.//
         if (value) {
           return color(value);
         }

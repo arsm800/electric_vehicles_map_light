@@ -8,18 +8,26 @@
 
 <div id="map"></div>
 
+
+
 <script>
-console.log("mapbox");
 
 L.mapbox.accessToken = "pk.eyJ1IjoiYXJzbTgwMCIsImEiOiJjaWw2emQ0cG4wMDR1dWttMHpqbnNreTduIn0.UNqZukLBJRc2FuAvpwVuWQ";
 
 var map = L.mapbox.map("map", "mapbox.dark")
 .setView([ "<%= @state.latitude %>", "<%= @state.longitude %>" ], 7);
 
+
+
 $.getJSON("/stations_json", function(response) {
-  console.log(response);
   response.forEach(function(station) {
     if (station.state_abbr === "<%= @state.state_abbr %>") {
+      // var marker = L.marker(new L.LatLng(parseFloat(station.latitude), parseFloat(station.longitude)), {
+      //   icon: L.mapbox.marker.icon({"marker-symbol": "post", "marker-color": "0044FF"})
+      // });
+      // var markers = new L.markerClusterGroup();  //Tried declaring outside $.getJSON AJAX call.//
+      // markers.addLayer(marker); //Followed instructions from: https://www.mapbox.com/mapbox.js/example/v1.0.0/leaflet-markercluster/ (a guide to leaflet clusters)//
+
     var marker = L.marker([parseFloat(station.latitude), parseFloat(station.longitude)]);
     marker.addTo(map);
   }
