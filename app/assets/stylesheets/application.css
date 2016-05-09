@@ -85,7 +85,7 @@ h1, h2, h3, #home {
 .state-button {
   background-color: #4CAF50;
   color: white;
-  padding: 10px;
+  padding: 10px 14px 10px 14px;
   font-size: 11px;
   border: none;
   cursor: pointer;
@@ -114,6 +114,5 @@ h1, h2, h3, #home {
  }
 
  #buttons {
-  margin-top: 2em;
-  margin-bottom: 2em;
+  height: 175px;
  }

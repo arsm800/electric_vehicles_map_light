@@ -18,6 +18,12 @@
 
 <div id="usmap"></div>
 
+<div id="buttons">
+  <% @states.each do |state| %>
+    <%= button_to state.state, state_path(state), :method => "get", :class => "state-button" %>
+  <% end %>
+</div>
+
 <div class="dropdown">
   <button class="dropbtn">Select Year</button>
   <div class="dropdown-content">
@@ -30,12 +36,6 @@
 </div>
 
 <div id="bars"></div>
-
-<div id="buttons">
-  <% @states.each do |state| %>
-    <%= button_to state.state, state_path(state), :method => "get", :class => "state-button" %>
-  <% end %>
-</div>
 
 <script src="us_map.js"></script>
 <script src="graphs-index.js"></script>
