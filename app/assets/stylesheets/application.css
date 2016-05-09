@@ -48,7 +48,7 @@ h1, h2, h3, #home {
 .dropbtn-year {
     background-color: #4CAF50;
     color: white;
-    padding: 5px;
+    padding: 8px;
     font-size: 10px;
     border: none;
     cursor: pointer;
@@ -68,7 +68,7 @@ h1, h2, h3, #home {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 167px;
+    min-width: 197px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
 
