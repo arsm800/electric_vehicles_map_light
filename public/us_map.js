@@ -1,4 +1,3 @@
-console.log("us_map");
 
 var w = 1200;
 var h = 800;

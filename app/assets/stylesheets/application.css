@@ -93,6 +93,11 @@ h1, h2, h3, #home {
   margin: .1em .8em .3em .3em;
 }
 
+.description {
+  text-align: center;
+  font: 1em helvetica;
+  padding-bottom: 1em;
+}
 #bars {
   margin: 0 auto;
 }
