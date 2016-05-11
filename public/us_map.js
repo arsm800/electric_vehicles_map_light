@@ -96,11 +96,11 @@ d3.csv("electric_vehicles.csv", function(data) {  //Load csv file data and set i
       .on("mouseout", function(d, i) {
         d3.selectAll("path")
         .style("fill-opacity", 1);
-      })
-      .on("click", function() {
-        location.href = "/states/10";  //I tried this.state_id, but no console.logs appear and thid.state_id does not work.//
-        console.log("hello");
       });
+      // .on("click", function() {
+      //   location.href = "/states/10";  //I tried this.state_id, but no console.logs appear and thid.state_id does not work.//
+      //   console.log("hello");
+      // });
 
       paths.style("fill", function(d) {
         var value = d.properties.value;
