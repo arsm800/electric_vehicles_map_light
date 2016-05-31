@@ -14,9 +14,22 @@
  *= require_self
  */
 
-h1, h2, h3, #home {
+h1 {
   font-family: Helvetica;
   text-align: center;
+  margin-bottom: 0;
+}
+
+h2, h3, #home {
+  font-family: Helvetica;
+  text-align: center;
+}
+
+.code {
+  font-family: Helvetica;
+  text-align: center;
+  margin-bottom: 5;
+  margin-top: 0;
 }
 
 /*.axis {

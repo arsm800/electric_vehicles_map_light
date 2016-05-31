@@ -33,7 +33,7 @@ end
 require "csv"
 
 csv_text = File.read(Rails.root.join("db", "electric_fuel_stations.csv"))
-csv = CSV.parse(csv_text, :headers => true)
+csv = CSV.parse(csv_text, :headers => true, :encoding => "iso-8859-1:utf-8")
 csv.each do |row|
   e = Station.new
   e.city = row["city"]
